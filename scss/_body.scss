@@ -1,0 +1,8 @@
+// Body Styles
+body {
+    background-color: $body-bg-color;
+
+    &.animating{
+        overflow: hidden;
+    }
+}

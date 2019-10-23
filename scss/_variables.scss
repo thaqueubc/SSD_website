@@ -1,0 +1,55 @@
+// Colors
+$navbar-color: rgba(8, 63, 243, 0.801);
+$body-bg-color: #7c7979b0;
+$wrapper-bg-color: white;
+// Text Colors
+$text-color-dark: black;
+$text-color-light: white;
+
+// Use Color functions to brighten and darken colors
+$navbar-color-dark: darken($navbar-color, 20);
+$navbar-color-light: lighten($navbar-color, 20);
+
+// Fonts
+$body-font: Georgia, Times, Times New Roman, serif;
+$heading-font: Tahoma, Verdana, Segoe, sans-serif;
+// Typographic Defualts
+$line-height: 1.4;
+
+// Layout variables
+$padding: 30px;
+// Grid Values
+$gutter: 2;
+// Header variables
+$header-height: 60px;
+
+// Function to determine column width
+// takes two numerical parameters:
+// $c -> the number of columns in a row
+// $g -> the gutter amount
+@function colWidth($c, $g: 2){
+    @return ((100 - $g * ($c - 1)) / $c) * 1%;
+}
+
+$one-col: 100%;
+$two-col: colWidth(2);
+$three-col: colWidth(3);
+$four-col: colWidth(4);
+$five-col: colWidth(5);
+$six-col: colWidth(6);
+
+// Function to
+// Convert Px to Ems
+@function em($px, $bc: 16){
+    @return #{$px/$bc}em; 
+}
+
+// Media Query Breakpoints
+$desktopMedium: em(1250);
+$tabletLandscape: em(1024);
+$tabletPortrait: em(850);
+$phoneLandscape: em(670);
+$phonePortrait: em(420);
+
+// Utility variables
+$link-hover-selector: '&:hover, &:focus, &:active';

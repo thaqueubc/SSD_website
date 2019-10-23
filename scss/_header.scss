@@ -1,0 +1,22 @@
+// Header styles
+header {
+    background-color: $navbar-color;
+    padding: $padding/2 $padding;
+    @include flex-layout-row;
+    align-items: center;
+    height: $header-height;
+
+    h1 {
+        flex: 1;
+        @include flatten;
+        color: $text-color-light;
+        font-size: 1.5em;
+        @include mq($phoneLandscape){
+            font-size: 1.5em;
+        }
+    }
+
+    @include mq($phoneLandscape){
+        display: flex;   
+    }
+}

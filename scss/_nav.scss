@@ -1,0 +1,88 @@
+// Main Navigation Styles
+nav {
+    // locally scoped variable
+    $height: 40px;
+    $border: 1px solid white;
+    background-color: $navbar-color-dark;
+    visibility: hidden;
+    position: fixed;
+    transition: visibility 0s 0.3s;  
+    flex: 1;
+    top: $header-height;
+    left: 0;
+    width: 80%;
+    transform: translateX(-100%);
+    transition: visibility 0s 0.3s, transform 0.3s ease-out;
+
+    .show & {
+        visibility: visible;
+        transform: translate(0);
+        transition: visibility 0s, transform 0.3s ease-out;
+    }
+
+    ul {
+        @include flatten;
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+        padding: 0 20px;
+        font-size: 1.2em;
+        display: block;
+        border-top: $border;
+        color: $text-color-light;
+        line-height: $height;
+        text-align: center; 
+        
+        #{$link-hover-selector} {
+            outline: none;
+            background-color: rgba(white, 0.3);
+        }
+
+    }
+
+    @include mq($phoneLandscape) {
+        visibility: visible;
+        position: static;
+        height: $height;
+        border-top: none;
+        transform: none;
+        background-color: none;   
+        ul {
+            display: flex;
+        }
+
+
+        li{ 
+            flex: 1;
+            position: relative;
+            .nav-dropdown{
+                display: none;    
+                position: absolute;
+                z-index: 1;
+                background-color: $navbar-color-dark;
+                box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+                li{
+                   min-width: 142px;
+                    border: 1px solid white;
+                    a{
+                        padding: 15px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
+    
+        a {
+            line-height: $height;
+            border-right: $border;
+            border-top: none;
+            @at-root nav li:last-child a {
+                border-right: none;
+            }
+        }
+        
+    }
+
+}

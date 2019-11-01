@@ -1,5 +1,6 @@
 // Header styles
 header {
+    z-index: 9000;
     background-color: $navbar-color;
     padding: $padding/2 $padding;
     @include flex-layout-row;
@@ -7,6 +8,7 @@ header {
     height: $header-height;
 
     h1 {
+        z-index: 9000;
         flex: 1;
         @include flatten;
         color: $text-color-light;

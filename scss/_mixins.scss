@@ -9,6 +9,14 @@
         right: auto;
     }
 }
+// Mixin for centering element vertically and horizontally with position absolute
+
+@mixin absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 // Mixin for clearing out
 // margins and padding and

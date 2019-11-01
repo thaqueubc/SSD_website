@@ -29,12 +29,13 @@ body {
     overflow: hidden; }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1900px;
   margin-left: auto;
   margin-right: auto;
   background-color: white; }
 
 header {
+  z-index: 9000;
   background-color: rgba(8, 63, 243, 0.801);
   padding: 15px 30px;
   display: flex;
@@ -43,6 +44,7 @@ header {
   align-items: center;
   height: 60px; }
   header h1 {
+    z-index: 9000;
     flex: 1;
     margin: 0;
     padding: 0;
@@ -55,6 +57,68 @@ header {
   @media (min-width: 41.875em) {
     header {
       display: flex; } }
+
+.banner {
+  overflow: hidden;
+  position: relative; }
+
+.banner-content {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  grid-template-rows: repeat(3, 200px);
+  grid-template-areas: "a b c" "d e f" "g h i"; }
+  .banner-content .banner-box {
+    height: 200px;
+    width: 200px;
+    box-shadow: inset 0 0 40px #00000079; }
+  .banner-content .banner-box-title {
+    text-align: center; }
+  .banner-content .banner-box-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase; }
+  .banner-content .banner-box-text:nth-of-type(1) {
+    background-color: blue; }
+  .banner-content .banner-box-text:nth-of-type(2) {
+    background-color: purple; }
+  .banner-content .banner-box-text:nth-of-type(3) {
+    background-color: orange; }
+  .banner-content .banner-box-text:nth-of-type(4) {
+    background-color: green; }
+  .banner-content .banner-box-image {
+    object-fit: cover; }
+  .banner-content .box-a {
+    grid-area: a; }
+  .banner-content .box-b {
+    grid-area: b; }
+  .banner-content .box-c {
+    grid-area: c; }
+  .banner-content .box-d {
+    grid-area: d; }
+  .banner-content .box-e {
+    grid-area: e; }
+  .banner-content .box-f {
+    grid-area: f; }
+  .banner-content .box-g {
+    grid-area: g; }
+  .banner-content .box-h {
+    grid-area: h; }
+
+.hero-image {
+  z-index: 900;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpeg");
+  filter: blur(8px);
+  transform: scale(1.1);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 .hamburger {
   display: block;
@@ -120,6 +184,7 @@ header {
       display: none; } }
 
 nav {
+  z-index: 9000;
   background-color: rgba(5, 37, 144, 0.801);
   visibility: hidden;
   position: fixed;
@@ -185,8 +250,10 @@ nav {
 
 footer {
   padding: 30px;
-  border-top: 1px dotted #7c7979b0; }
+  border-top: 1px dotted #7c7979b0;
+  background-color: #272727; }
   footer p {
+    color: white;
     margin: 0;
     padding: 0;
     line-height: 1; }

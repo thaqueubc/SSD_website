@@ -1,0 +1,10 @@
+.hero-image {
+  z-index: 900;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url("/images/students-working-together.jpeg");
+  filter: blur(8px);
+  transform: scale(1.1); //remove the white blur border
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

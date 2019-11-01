@@ -1,6 +1,7 @@
 // Main Navigation Styles
 nav {
     // locally scoped variable
+    z-index: 9000;
     $height: 40px;
     $border: 1px solid white;
     background-color: $navbar-color-dark;
@@ -86,3 +87,4 @@ nav {
     }
 
 }
+

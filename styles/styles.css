@@ -66,6 +66,18 @@ header {
 .banner {
   overflow: hidden;
   position: relative; }
+  .banner .banner-scroll-icon {
+    border: solid white;
+    border-width: 0 8px 8px 0;
+    display: inline-block;
+    padding: 8px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: rotate(45deg); }
+    html {
+      scroll-behavior: smooth; }
 
 .banner-content {
   color: white;

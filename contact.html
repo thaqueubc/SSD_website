@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SSD: Contact</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <div class="container">
+      <header>
+          <h1>BCIT</h1>
+
+          <button class="hamburger" id="hamburger">
+              <span class="hamburger-content">
+                  <span class="text">Menu</span>
+                  <span class="bar"></span>
+              </span>
+          </button>
+
+          <nav id="main-navigation">
+              <ul>
+                  <li><a href="#0">Home</a></li>
+                  <li><a href="#0">About</a>
+                      <ul class="nav-dropdown">
+                          <li><a href="#0">Courses</a></li>
+                          <li><a href="#0">Schedule</a></li>
+                          <li><a href="#0" class="active">E-Resources</a></li>
+                      </ul>
+                  </li>
+
+                  <li><a href="#0">Staff</a></li>
+                  <li><a href="#0">Students</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+              </ul>
+          </nav>
+      </header>
+
+      <main>
+        <div class="form">
+            <section class="form_container">
+            <h2> Contact Us </h2>
+            <form id="myForm" action="#" onsubmit="thankYou()">
+                <div class="info">
+                    <p class="info_left">
+                        <label for="first_name"> First Name : </label>  <br>
+                        <input type="text" name="first_name" id="first_name" placeholder="Please enter your First name" required>  
+                    </p>
+                    <p class="info_right">
+                        <label for="last_name">Last Name : </label>  <br>
+                        <input type="text" name="last_name" id="last_name" placeholder="Please enter your Last name" required> 
+                    </p>
+                </div>
+                
+                <div class="info">
+                    <p class="info_left">
+                        <label for="email">Email :</label>  <br>
+                        <input type="text" name="email_id" id="email" placeholder="Please enter your Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
+                    </p>
+                    <p class="info_right"> 
+                        <label for="student_id">Student Number : </label> <br>
+                         <input type="text" id="student_id"
+                                               name="student_id" 
+                                               placeholder="Please enter BCIT student ID e.g. A01010101" 
+                                               required
+                                               pattern="[Aa][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
+                    </p>
+
+                    <p >
+                        <label for="telephone">Email :</label>  <br>
+                        <input type="text" name="email_id" id="telephone" placeholder="Please enter your phone no" required> 
+                    </p>
+                </div>
+                
+                <div  style="font-weight:bold">
+                    <p> <label for="student_status">Student Status : </label></p> 
+                    <input type="radio" name="current_student" id="student_status" value="Current BCIT Student">  Current BCIT Student
+                    <br> <input type="radio" name="prospective_student" value="Prospective Student">  Prospective Student
+                </div>
+                
+                <div style="font-weight:bold">
+                    <p> <label for="comments">Comments or Question: </label> </p> <br>
+                    <textarea cols="50" rows="5" name="Comments" id="comments" placeholder="Comments or Question" required> </textarea>
+                </div>
+                
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+                
+            </form>
+        
+            </section>
+    
+      </main>
+
+      <footer>
+          <p>some kind of information</p>
+      </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="scripts/dropdown.js"></script>
+    <script src="scripts/script-menu-slide-out.js"></script>
+</body>
+</html>

@@ -4,6 +4,7 @@ nav {
     z-index: 9000;
     $height: 40px;
     $border: 1px solid white;
+    background-color:$navbar-color-dark;
     visibility: hidden;
     position: fixed;
     transition: visibility 0s 0.3s;  
@@ -83,6 +84,10 @@ nav {
             }
         }
         
+    }
+
+    @include mq($desktopMedium){
+        background-color:transparent;
     }
 
 }

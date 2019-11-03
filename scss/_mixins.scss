@@ -208,4 +208,21 @@ $aspect-ratios: (
     }
 }
 
+@mixin  subheading {
+    font-size: 2em; 
+    text-shadow: 10px 10px 10px #363636;
+}
+
+@mixin display_ul {
+    li{
+        list-style: none;
+        a{  
+            text-decoration: none;
+            outline: none;
+        }  
+    }
+     
+}
+
+
 

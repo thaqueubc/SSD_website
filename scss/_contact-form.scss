@@ -1,64 +1,79 @@
 main{
-   min-height: 80vh;
-   div.form-heading{
-        width: 100%;
-        height: auto;
-    }
+   min-height: 100vh;
 
-    div.form{
-        section.form_container{
-            flex: 1;
-            min-height: 50vh;
-            margin:10px;
-            border-radius: 10px;
+   form{
+        min-width: 820px;
+        @include absolute-center;
+        margin-top: 20px;;
+        h2{
+            @include subheading;
+           transform: translateX(40%);
+           margin: 10px;
+        }
+
+        legend {
+            padding: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        @include margin-center;
+        }
+
+        .form-group{
+            margin: 10px;
             padding: 10px;
-        
-            h2{
-                @include subheading;
-                margin-bottom: 60px;
-            }
-            form{
-                div.info{
-                display: flex;
-                    p{
-                        flex: 1 1 50%;
-                        font-weight: bold;
-                        float: left;
-                    }
-
+            .form-row {
+                margin: 10px;
+                input{
+                    display: block;
+                    width: 100%;
+                    padding: 8px;
+                    margin: 5px 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.507);
+                    border-radius: 5px;
                 }
-            }
-            
+
+                textarea{
+                    padding: 8px;
+                    margin: 5px 10px;
+                    border: 1px solid rgba(0, 0, 0, 0.507);
+                    border-radius: 5px;
+                }
+                }
+       
         }
 
-        @media (max-width:  750px){
-
-            div.info{
-                flex-direction: column;
-                p.info_left{
-                    flex: 1;
-                }
-
-                p.info_right{
-                    flex: 1;
-                }
-
-
+        .submit{  
+            margin-top: 10px;
+            input {
+                display: block;
+                width: 100%;
+                color: #fff;
+                background-color: lightblue;
+                border: 2px solid lightblue;
+                padding: 8px 16px;
+                font-size: 1.1em;
+                border-radius: 6px;
+                cursor: pointer;
             }
-        }
-
-        @media (max-width:  750px){
-            flex-direction: column-reverse;
-            section.form_container{
-                flex: 1;
-                margin:10px 20px;
-                margin-bottom: 20px;
-            }
-
-            
         }
 
     }
 
-}
+    
+   }
+
+//         @media (max-width:  750px){
+//             flex-direction: column-reverse;
+//             section.form_container{
+//                 flex: 1;
+//                 margin:10px 20px;
+//                 margin-bottom: 20px;
+//             }
+
+            
+//         }
+
+//     }
+
+
 

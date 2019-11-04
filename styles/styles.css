@@ -35,7 +35,7 @@ body {
   background-color: white; }
 
 .container {
-  max-width: 820px;
+  max-width: 1200px;
   background-color: white;
   color: black;
   margin-left: auto;
@@ -277,40 +277,54 @@ nav {
       background-color: transparent; } }
 
 main {
-  min-height: 80vh; }
-  main div.form-heading {
-    width: 100%;
-    height: auto; }
-  main div.form section.form_container {
-    flex: 1;
-    min-height: 50vh;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px; }
-    main div.form section.form_container h2 {
+  min-height: 100vh; }
+  main form {
+    min-width: 820px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 20px; }
+    main form h2 {
       font-size: 2em;
       text-shadow: 10px 10px 10px #363636;
-      margin-bottom: 60px; }
-    main div.form section.form_container form div.info {
-      display: flex; }
-      main div.form section.form_container form div.info p {
-        flex: 1 1 50%;
-        font-weight: bold;
-        float: left; }
-  @media (max-width: 750px) {
-    main div.form div.info {
-      flex-direction: column; }
-      main div.form div.info p.info_left {
-        flex: 1; }
-      main div.form div.info p.info_right {
-        flex: 1; } }
-  @media (max-width: 750px) {
-    main div.form {
-      flex-direction: column-reverse; }
-      main div.form section.form_container {
-        flex: 1;
-        margin: 10px 20px;
-        margin-bottom: 20px; } }
+      transform: translateX(40%);
+      margin: 10px; }
+    main form legend {
+      padding: 0;
+      font-weight: bold;
+      font-size: 1.2em;
+      margin-left: auto;
+      margin-right: auto; }
+    main form .form-group {
+      margin: 10px;
+      padding: 10px; }
+      main form .form-group .form-row {
+        margin: 10px; }
+        main form .form-group .form-row input {
+          display: block;
+          width: 100%;
+          padding: 8px;
+          margin: 5px 10px;
+          border: 1px solid rgba(0, 0, 0, 0.507);
+          border-radius: 5px; }
+        main form .form-group .form-row textarea {
+          padding: 8px;
+          margin: 5px 10px;
+          border: 1px solid rgba(0, 0, 0, 0.507);
+          border-radius: 5px; }
+    main form .submit {
+      margin-top: 10px; }
+      main form .submit input {
+        display: block;
+        width: 100%;
+        color: #fff;
+        background-color: lightblue;
+        border: 2px solid lightblue;
+        padding: 8px 16px;
+        font-size: 1.1em;
+        border-radius: 6px;
+        cursor: pointer; }
 
 footer {
   padding: 30px;

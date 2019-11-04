@@ -37,68 +37,78 @@
           </nav>
       </header>
 
-      <main>
-        <div class="form">
-            <section class="form_container">
-            <h2> Contact Us </h2>
-            <form id="myForm" action="#" onsubmit="thankYou()">
-                <div class="info">
-                    <p class="info_left">
-                        <label for="first_name"> First Name : </label>  <br>
-                        <input type="text" name="first_name" id="first_name" placeholder="Please enter your First name" required>  
-                    </p>
-                    <p class="info_right">
-                        <label for="last_name">Last Name : </label>  <br>
-                        <input type="text" name="last_name" id="last_name" placeholder="Please enter your Last name" required> 
-                    </p>
-                </div>
-                
-                <div class="info">
-                    <p class="info_left">
-                        <label for="email">Email :</label>  <br>
-                        <input type="text" name="email_id" id="email" placeholder="Please enter your Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
-                    </p>
-                    <p class="info_right"> 
-                        <label for="student_id">Student Number : </label> <br>
-                         <input type="text" id="student_id"
-                                               name="student_id" 
-                                               placeholder="Please enter BCIT student ID e.g. A01010101" 
-                                               required
-                                               pattern="[Aa][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]">
-                    </p>
+    <main>
+      
+     
 
-                    <p >
-                        <label for="telephone">Email :</label>  <br>
-                        <input type="text" name="email_id" id="telephone" placeholder="Please enter your phone no" required> 
-                    </p>
-                </div>
-                
-                <div  style="font-weight:bold">
-                    <p> <label for="student_status">User : </label></p> 
+      <form action="#0" method="POST" onsubmit="thankYou()" id="myForm">
+        <h2> Contact Us </h2>
+
+        <fieldset>
+        <legend>Personal information</legend>
+        <div class="form-group">
+            <div class="form-row ">
+                <label for="first_name"> First Name : </label> 
+                <input type="text" name="first_name" id="first_name" placeholder="First name" required>
+            </div>
+
+            
+            <div class="form-row ">
+                <label for="last_name">Last Name : </label>
+                <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+            </div>
+            
+            <div class="form-row ">
+                <label for="email">Email :</label> 
+                <input type="text" name="email_id" id="email" placeholder="Please enter your Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
+            </div>
+
+            <div class="form-row ">
+                <label for="telephone">Phone:</label> 
+                <input type="text" name="telephone" id="telephone" placeholder="Format: +1 999-999-9999 " pattern="[\+]\d{1} \d{3}[\-]\d{3}[\-]\d{4}" required>
+            </div>
+        </div>       
+        </fieldset>
+
+        <fieldset>
+            <legend>User</legend>
+            <!-- <div class="form-group"> -->
+                <div class="form-radio">
                     <input type="radio" name="current_student" id="student_status" value="Current BCIT Student">  Current BCIT Student
-                    <br> <input type="radio" name="prospective_student" value="Prospective Student">  Prospective Student
-                    <br> <input type="radio" name="prospective_student" value="Prospective Student">  Instrutor
+                    <label for="current_student">Current Student</label>
                 </div>
-                
-                <div style="font-weight:bold">
-                    <p> <label for="comments">Comments or Question: </label> </p> <br>
+
+                <div class="form-radio ">
+                    <input type="radio" name="prospective_student" value="Prospective Student">  Prospective Student
+                    <label for="prospective_student">Prospective Student</label>
+                </div>
+
+                <div class="form-radio">
+                    <input type="radio" name="instructor" value="instructor">  Instrutor
+                    <label for="instructor">Instructor</label>
+                </div>
+            <!-- </div> -->
+        </fieldset>
+
+        <fieldset>
+            <legend>Comment or Question</legend>
+            <div class="form-group">
+                <div class="form-row">
                     <textarea cols="50" rows="5" name="Comments" id="comments" placeholder="Comments or Question" required> </textarea>
-                </div>
-                
-                <div>
-                    <input type="submit" value="Submit">
-                </div>
-                
-            </form>
-        
-            </section>
-    
-      </main>
+                </div>   
+            </div>
+        </fieldset>
+
+        <div class="submit">
+                <input type="submit" value="Submit">
+        </div>
+    </form>
+    </main>
 
       <footer>
           <p>some kind of information</p>
       </footer>
-  </div>
+</div>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/script-menu-slide-out.js"></script>

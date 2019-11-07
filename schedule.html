@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>SSD: Course Schedule</title>
-  <link rel="stylesheet" href="styles/styles.css">
+    <link href='fullcalendar/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/daygrid/main.css' rel='stylesheet' />
+    <link href='fullcalendar/packages/list/main.css' rel='stylesheet' />
+
+    <script src='fullcalendar/packages/core/main.js'></script>
+    <script src='fullcalendar/packages/daygrid/main.js'></script>
+    <script src='fullcalendar/packages/list/main.js'></script>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
   <div class="wrapper">
@@ -37,6 +44,11 @@
           </nav>
       </header>
 
+      <body>
+          <h1 class="schedule-heading">SSD Schedule 2019</h1>
+            <div id='calendar'></div>
+      </body>
+
       <footer>
           <p>some kind of information</p>
       </footer>
@@ -44,5 +56,7 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="scripts/dropdown.js"></script>
     <script src="scripts/script-menu-slide-out.js"></script>
+    <script src="scripts/xlsx.full.min.js"></script>
+    <script src="scripts/schedule.js"></script>
 </body>
 </html>

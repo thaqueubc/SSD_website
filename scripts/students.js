@@ -17,28 +17,30 @@ req.onload = function(e) {
   var studentSheet = workbook.Sheets[studentSheetName];
   students = XLSX.utils.sheet_to_json(studentSheet);
 
+  var studentTable = document.querySelector('.student-table');
+
+  for(let i = 0; i < students.length; i++) {
+    // Create the full name td
+    let nameTd = document.createElement('td');
+    let fullName = students[i]["First Name"] + " " + students[i]["Last Name"];
+    let fullNameText = document.createTextNode(fullName);
+    nameTd.appendChild(fullNameText);
+  
+    // Create the contact td
+    let contactTd = document.createElement('td');
+    let email = students[i]["Email"];
+    let emailText = document.createTextNode(email);
+    contactTd.appendChild(emailText);
+  
+    // Create tr and append td, then append to the student table
+    let tr = document.createElement('tr');
+    tr.appendChild(nameTd);
+    tr.appendChild(contactTd);
+    studentTable.appendChild(tr);
+  }
 }
 
 req.send();
 
-var studentTable = document.querySelector('.student-table');
 
-for(let i = 0; i < students.length; i++) {
-  // Create the full name td
-  let nameTd = document.createElement('td');
-  let fullName = students[i]["First Name"] + " " + students[i]["Last Name"];
-  let fullNameText = document.createTextNode(fullName);
-  nameTd.appendChild(fullNameText);
 
-  // Create the contact td
-  let contactTd = document.createElement('td');
-  let email = students[i]["Email"];
-  let emailText = document.createTextNode(email);
-  contactTd.appendChild(emailText);
-
-  // Create tr and append td, then append to the student table
-  let tr = document.createElement('tr');
-  tr.appendChild(nameTd);
-  tr.appendChild(contactTd);
-  studentTable.appendChild(tr);
-}

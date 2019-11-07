@@ -329,10 +329,22 @@ main {
 .schedule-page .schedule-heading {
   text-align: center; }
 
-#calendar {
+.calendar {
   padding: 50px 0;
   width: 80%;
   margin: 0 auto; }
+  .calendar .fc-list-item-time {
+    display: none; }
+  .calendar .fc-day-grid-event .fc-content {
+    white-space: normal; }
+  .calendar.calendar-desktop {
+    display: none; }
+    @media (min-width: 700px) {
+      .calendar.calendar-desktop {
+        display: block; } }
+  @media (min-width: 700px) {
+    .calendar.calendar-mobile {
+      display: none; } }
 
 footer {
   padding: 30px;

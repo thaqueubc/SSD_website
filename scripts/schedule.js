@@ -16,8 +16,6 @@ req.onload = function(e) {
   ssdSchedule = XLSX.utils.sheet_to_json(scheduleSheet);
 
   // Put sheet JSON data into array for calendar events
-// var eventArray = [{color: 'black',start: '2019-11-21', title: 'JavaScript - Jason'}, {title: 'HTML/CSS', start: '2019-11-22'}]
-
 
 ssdSchedule.forEach(function(day){
   let eventObj = {};
@@ -49,25 +47,56 @@ ssdSchedule.forEach(function(day){
   eventArray.push(eventObj);
 });
 
-// Render the calendar
-var calendarEl = document.getElementById('calendar');
+// Render the calendar for desktop
+var calendarDesktopEl = document.getElementById('calendar-desktop');
 
-
-var calendar = new FullCalendar.Calendar(calendarEl, {
+var calendarDesktop = new FullCalendar.Calendar(calendarDesktopEl, {
 plugins: [ 'dayGrid', 'list' ],
 defaultView: 'dayGridMonth',
 
 header: {
     left: 'title',
-    right: 'dayGridMonth,listMonth',
-    center: 'today,prev,next'
+    center: 'dayGridMonth,listMonth',
+    right: 'today,prev,next'
 },
 
 events: eventArray
 });
-calendar.render();
+calendarDesktop.render();
+
+
+var calendarMobileEl = document.getElementById('calendar-mobile');
+
+var calendarMobile = new FullCalendar.Calendar(calendarMobileEl, {
+plugins: [ 'list' ],
+defaultView: 'listMonth',
+height: 600,
+
+header: {
+    left: 'title',
+    center: '',
+    right: 'today,prev,next'
+},
+  titleFormat: {
+    month: 'short',
+    year: 'numeric',
+  },
   
+  listDayFormat: {
+    weekday: 'long'
+  },
+
+  listDayAltFormat: {
+    month: 'short',
+    day: 'numeric'
+  },
+
+events: eventArray
+});
+calendarMobile.render();
+
 }
+
 
 req.send();
 

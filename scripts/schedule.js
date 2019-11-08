@@ -53,6 +53,7 @@ var calendarDesktopEl = document.getElementById('calendar-desktop');
 var calendarDesktop = new FullCalendar.Calendar(calendarDesktopEl, {
 plugins: [ 'dayGrid', 'list' ],
 defaultView: 'dayGridMonth',
+weekends: false,
 
 header: {
     left: 'title',

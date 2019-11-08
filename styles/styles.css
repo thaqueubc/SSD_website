@@ -514,35 +514,29 @@ footer {
     padding: 0;
     line-height: 1; }
 
-.StaffInfo {
+.staff-container .StaffInfo {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   text-align: center;
   padding: 10px; }
-
-h1 {
+.staff-container h1 {
   font-size: 2em;
   text-shadow: 10px 10px 10px #363636;
   padding: 5px;
   text-align: center; }
-
-div {
+.staff-container div {
   padding: 20px; }
-
-img {
+.staff-container img {
   width: 30%;
   height: 30%;
   object-fit: cover; }
-
-.left {
+.staff-container .left {
   flex: 1 1 49%; }
-
-.right {
+.staff-container .right {
   flex: 1 1 49%; }
-
-.Info {
+.staff-container .Info {
   text-align: center; }
 
 /*# sourceMappingURL=styles.css.map */

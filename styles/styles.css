@@ -325,6 +325,88 @@ main {
         border-radius: 6px;
         cursor: pointer; }
 
+.outline {
+  display: flex;
+  box-shadow: inset -5px -5px 10px 10px whitesmoke; }
+  .outline aside {
+    flex: 1 1 18%;
+    padding-left: 20px; }
+    .outline aside li {
+      list-style: none; }
+      .outline aside li a {
+        text-decoration: none;
+        outline: none; }
+    .outline aside ul {
+      display: flex;
+      flex-direction: column;
+      padding: 5px; }
+      .outline aside ul li {
+        border: 1px solid white;
+        padding: 10px 15px;
+        margin: 5px 0;
+        text-align: center;
+        border-radius: 5px;
+        background: rgba(8, 63, 243, 0.801); }
+        .outline aside ul li a {
+          color: white;
+          font-weight: bold; }
+  .outline section {
+    flex: 1 1 78%;
+    padding: 30px;
+    margin: 10px;
+    margin-right: 25px; }
+    .outline section div {
+      padding: 10px; }
+      .outline section div .heading {
+        margin-top: 0;
+        font-size: 2em;
+        text-shadow: 10px 10px 10px #363636; }
+      .outline section div h2 {
+        font-size: 1.3em; }
+  @media (max-width: 750px) {
+    .outline {
+      flex-direction: column; }
+      .outline aside {
+        flex: 1;
+        padding: 10px;
+        margin: 5px; }
+        .outline aside ul {
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          padding: 0; }
+      .outline section {
+        flex: 1;
+        margin: 5px;
+        padding: 10px; }
+        .outline section div h1 {
+          margin: 10px auto; }
+        .outline section div table {
+          margin: 2px; } }
+  @media (max-width: 750px) and (max-width: 400px) {
+    .outline aside ul li a {
+      font-size: 0.8em; } }
+
+.schedule-page .schedule-heading {
+  text-align: center; }
+
+.calendar {
+  padding: 50px 0;
+  width: 80%;
+  margin: 0 auto; }
+  .calendar .fc-list-item-time {
+    display: none; }
+  .calendar .fc-day-grid-event .fc-content {
+    white-space: normal; }
+  .calendar.calendar-desktop {
+    display: none; }
+    @media (min-width: 700px) {
+      .calendar.calendar-desktop {
+        display: block; } }
+  @media (min-width: 700px) {
+    .calendar.calendar-mobile {
+      display: none; } }
+
 footer {
   padding: 30px;
   border-top: 1px dotted #7c7979b0;

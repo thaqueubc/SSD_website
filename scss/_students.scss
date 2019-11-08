@@ -1,27 +1,76 @@
-.student-heading {
-  text-align: center;
-}
-
-.student-table {
-  margin: 0 auto;
-  width: 80%;
-
-  tr {
+.student-wrapper {
+  .student-heading {
+    text-align: center;
+  }
+  footer {
+    margin-top: 100px;
+  }
+  .student-table {
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.479);
     justify-content: center;
-    padding: 20px 0;
+    @media(min-width:600px) {
+      justify-content: space-around;
+    }
+    tr {
+      max-width: 300px;
+      display: flex;
+      flex-wrap: wrap;
+      color: rgb(51, 51, 51);
+      border-bottom: 1px solid rgba(128, 128, 128, 0.479);
+      justify-content: center;
+      padding: 10px 0;
+      margin-top: 10px;
 
-  }
-
-  td {
-    width: 100%;
-
-    &:nth-of-type(1) {
-      font-weight: 700;
+      &:hover {
+        color: black;
+      }
+    }
+    td {
+      font-size: 1.1em;
+      width: 100%;
+      &:nth-of-type(1) {
+        font-weight: 700;
+      }
+      @media(min-width:600px) {
+        font-size: 1.2em;
+        max-width: 250px;
+      }
+    }
+    .sm-td {
+      display: flex;
+      justify-content: center;
+      i {
+        font-size: 1.7em;
+        padding: 20px 20px 0px;
+        transition: all 0.2s ease;
+          &:hover,
+          &:active,
+          &:focus {
+            transform: translateY(-5%);
+          }
+          @at-root .student-table tr:hover i.fa-github {
+            color: #333;
+          }
+        
+        &.fa-github {
+          color: grey;
+          &:hover,
+          &:active,
+          &:focus {
+            color: #333;
+          }
+        }
+        &.fa-linkedin-in {
+          color: grey;
+          &:hover,
+          &:active,
+          &:focus {
+            color: #2867B2;
+          }
+        }
+      }
     }
   }
-
-
 }

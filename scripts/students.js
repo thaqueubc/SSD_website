@@ -36,6 +36,7 @@ req.onload = function(e) {
     let smTd = document.createElement('td');
     let gitIcon = document.createElement('i');
     let linkedinIcon = document.createElement('i');
+    smTd.className = 'sm-td';
     gitIcon.className = 'fab fa-github';
     linkedinIcon.className = 'fab fa-linkedin-in';
     smTd.appendChild(gitIcon);

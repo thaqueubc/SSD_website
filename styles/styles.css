@@ -279,7 +279,6 @@ nav {
 main {
   min-height: 100vh; }
   main form {
-    min-width: 820px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -326,25 +325,122 @@ main {
         border-radius: 6px;
         cursor: pointer; }
 
+.outline {
+  display: flex;
+  box-shadow: inset -5px -5px 10px 10px whitesmoke; }
+  .outline aside {
+    flex: 1 1 18%;
+    padding-left: 20px; }
+    .outline aside li {
+      list-style: none; }
+      .outline aside li a {
+        text-decoration: none;
+        outline: none; }
+    .outline aside ul {
+      display: flex;
+      flex-direction: column;
+      padding: 5px; }
+      .outline aside ul li {
+        border: 1px solid white;
+        padding: 10px 15px;
+        margin: 5px 0;
+        text-align: center;
+        border-radius: 5px;
+        background: rgba(8, 63, 243, 0.801); }
+        .outline aside ul li a {
+          color: white;
+          font-weight: bold; }
+  .outline section {
+    flex: 1 1 78%;
+    padding: 30px;
+    margin: 10px;
+    margin-right: 25px; }
+    .outline section div {
+      padding: 10px; }
+      .outline section div .heading {
+        margin-top: 0;
+        font-size: 2em;
+        text-shadow: 10px 10px 10px #363636; }
+      .outline section div h2 {
+        font-size: 1.3em; }
+  @media (max-width: 750px) {
+    .outline {
+      flex-direction: column; }
+      .outline aside {
+        flex: 1;
+        padding: 10px;
+        margin: 5px; }
+        .outline aside ul {
+          flex-direction: row;
+          justify-content: space-evenly;
+          margin: 0 auto;
+          padding: 0; }
+      .outline section {
+        flex: 1;
+        margin: 5px;
+        padding: 10px; }
+        .outline section div h1 {
+          margin: 10px auto; }
+        .outline section div table {
+          margin: 2px; } }
+  @media (max-width: 750px) and (max-width: 400px) {
+    .outline aside ul li a {
+      font-size: 0.8em; } }
+
 .schedule-page .schedule-heading {
   text-align: center; }
 
-.student-heading {
+.student-wrapper .student-heading {
   text-align: center; }
-
-.student-table {
+.student-wrapper footer {
+  margin-top: 100px; }
+.student-wrapper .student-table {
   margin: 0 auto;
-  width: 80%; }
-  .student-table tr {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (min-width: 600px) {
+    .student-wrapper .student-table {
+      justify-content: space-around; } }
+  .student-wrapper .student-table tr {
+    max-width: 300px;
     display: flex;
     flex-wrap: wrap;
+    color: #333333;
     border-bottom: 1px solid rgba(128, 128, 128, 0.479);
     justify-content: center;
-    padding: 20px 0; }
-  .student-table td {
+    padding: 10px 0;
+    margin-top: 10px; }
+    .student-wrapper .student-table tr:hover {
+      color: black; }
+  .student-wrapper .student-table td {
+    font-size: 1.1em;
     width: 100%; }
-    .student-table td:nth-of-type(1) {
+    .student-wrapper .student-table td:nth-of-type(1) {
       font-weight: 700; }
+    @media (min-width: 600px) {
+      .student-wrapper .student-table td {
+        font-size: 1.2em;
+        max-width: 250px; } }
+  .student-wrapper .student-table .sm-td {
+    display: flex;
+    justify-content: center; }
+    .student-wrapper .student-table .sm-td i {
+      font-size: 1.7em;
+      padding: 20px 20px 0px;
+      transition: all 0.2s ease; }
+      .student-wrapper .student-table .sm-td i:hover, .student-wrapper .student-table .sm-td i:active, .student-wrapper .student-table .sm-td i:focus {
+        transform: translateY(-5%); }
+      .student-table tr:hover i.fa-github {
+        color: #333; }
+      .student-wrapper .student-table .sm-td i.fa-github {
+        color: grey; }
+        .student-wrapper .student-table .sm-td i.fa-github:hover, .student-wrapper .student-table .sm-td i.fa-github:active, .student-wrapper .student-table .sm-td i.fa-github:focus {
+          color: #333; }
+      .student-wrapper .student-table .sm-td i.fa-linkedin-in {
+        color: grey; }
+        .student-wrapper .student-table .sm-td i.fa-linkedin-in:hover, .student-wrapper .student-table .sm-td i.fa-linkedin-in:active, .student-wrapper .student-table .sm-td i.fa-linkedin-in:focus {
+          color: #2867B2; }
 
 .calendar {
   padding: 50px 0;

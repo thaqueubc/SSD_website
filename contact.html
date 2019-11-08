@@ -21,23 +21,23 @@
 
           <nav id="main-navigation">
               <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="#0">About</a>
-                      <ul class="nav-dropdown">
-                          <li><a href="#0">Courses</a></li>
-                          <li><a href="#0">Schedule</a></li>
-                          <li><a href="#0" class="active">E-Resources</a></li>
-                      </ul>
-                  </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#0">About</a>
+                    <ul class="nav-dropdown">
+                        <li><a href="course.html">Courses</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                        <li><a href="e_resources.html" class="active">E-Resources</a></li>
+                    </ul>
+                </li>
 
-                  <li><a href="#0">Staff</a></li>
-                  <li><a href="#0">Students</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                <li><a href="stuff.html">Staff</a></li>
+                <li><a href="students.html">Students</a></li>
+                <li><a href="contact.html">Contact</a></li>
               </ul>
           </nav>
       </header>
 
-    <main>
+    <main class="form">
  
       <form action="#0" method="POST" onsubmit="thankYou()" id="myForm">
         <h2> Contact Us </h2>
@@ -46,18 +46,18 @@
         <legend>Personal information</legend>
         <div class="form-group">
             <div class="form-row ">
-                <label for="first_name"> First Name :<em>*</em> </label> 
+                <label for="first_name"> First Name<em>*</em>  :</label> 
                 <input type="text" name="first_name" id="first_name" placeholder="First name" required>
             </div>
 
             
             <div class="form-row ">
-                <label for="last_name">Last Name : </label>
+                <label for="last_name">Last Name<em>*</em> : </label>
                 <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
             </div>
             
             <div class="form-row ">
-                <label for="email">Email :</label> 
+                <label for="email">Email<em>*</em>  :</label> 
                 <input type="text" name="email_id" id="email" placeholder="Please enter your Email ID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required> 
             </div>
 
@@ -89,10 +89,10 @@
         </fieldset>
 
         <fieldset>
-            <legend>Comment or Question</legend>
+            <legend>Comment or Question<em>*</em> </legend>
             <div class="form-group">
                 <div class="form-row">
-                    <textarea cols="50" rows="5" name="Comments" id="comments" placeholder="Comments or Question" required> </textarea>
+                    <textarea row="10" name="Comments" id="comments" placeholder="Comments or Question" required> </textarea>
                 </div>   
             </div>
         </fieldset>

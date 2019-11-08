@@ -17,11 +17,11 @@ body {
   margin: 0; }
 
 body {
-  font-family: Georgia, Times, Times New Roman, serif;
+  font-family: "Archivo", sans-serif;
   line-height: 1.4; }
 
 h1, h2, h3, nav a, table {
-  font-family: Tahoma, Verdana, Segoe, sans-serif; }
+  font-family: "Archivo", sans-serif; }
 
 body {
   background: radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent) 50px 50px, linear-gradient(#A8B1BB 8px, transparent 8px) 0 -4px, linear-gradient(90deg, #A8B1BB 8px, transparent 8px) -4px 0;

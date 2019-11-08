@@ -31,11 +31,21 @@ req.onload = function(e) {
     let email = students[i]["Email"];
     let emailText = document.createTextNode(email);
     contactTd.appendChild(emailText);
+
+    // Create social media td
+    let smTd = document.createElement('td');
+    let gitIcon = document.createElement('i');
+    let linkedinIcon = document.createElement('i');
+    gitIcon.className = 'fab fa-github';
+    linkedinIcon.className = 'fab fa-linkedin-in';
+    smTd.appendChild(gitIcon);
+    smTd.appendChild(linkedinIcon);
   
     // Create tr and append td, then append to the student table
     let tr = document.createElement('tr');
     tr.appendChild(nameTd);
     tr.appendChild(contactTd);
+    tr.appendChild(smTd);
     studentTable.appendChild(tr);
   }
 }

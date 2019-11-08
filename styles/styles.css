@@ -329,6 +329,23 @@ main {
 .schedule-page .schedule-heading {
   text-align: center; }
 
+.student-heading {
+  text-align: center; }
+
+.student-table {
+  margin: 0 auto;
+  width: 80%; }
+  .student-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.479);
+    justify-content: center;
+    padding: 20px 0; }
+  .student-table td {
+    width: 100%; }
+    .student-table td:nth-of-type(1) {
+      font-weight: 700; }
+
 .calendar {
   padding: 50px 0;
   width: 80%;

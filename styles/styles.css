@@ -504,6 +504,7 @@ nav {
       display: none; } }
 
 footer {
+  text-align: center;
   padding: 30px;
   border-top: 1px dotted #7c7979b0;
   background-color: #272727; }

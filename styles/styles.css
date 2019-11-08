@@ -331,7 +331,9 @@ main {
   flex-direction: column; }
   .outline aside ul {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
     padding: 5px; }
     .outline aside ul li {
       border: 1px solid white;
@@ -343,7 +345,15 @@ main {
       list-style: none; }
       .outline aside ul li a {
         color: white;
-        font-weight: bold; }
+        font-weight: bold;
+        text-decoration: none; }
+  .outline section {
+    margin: 5px;
+    padding: 10px; }
+    .outline section div h1 {
+      margin: 10px auto; }
+    .outline section div table {
+      margin: 2px; }
   @media (min-width: 600px) {
     .outline aside ul {
       flex-direction: row;
@@ -351,14 +361,7 @@ main {
       margin: 0;
       padding: 0; }
       .outline aside ul li a {
-        text-decoration: none; }
-    .outline section {
-      margin: 5px;
-      padding: 10px; }
-      .outline section div h1 {
-        margin: 10px auto; }
-      .outline section div table {
-        margin: 2px; } }
+        text-decoration: none; } }
   @media (min-width: 800px) {
     .outline {
       flex-direction: row; }

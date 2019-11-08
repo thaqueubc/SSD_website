@@ -225,6 +225,16 @@ nav {
     visibility: visible;
     transform: translate(0);
     transition: visibility 0s, transform 0.3s ease-out; }
+    .show nav.activated i {
+      border: solid white;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      margin: 2px;
+      color: white; }
+      .show nav.activated i.down {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg); }
   nav ul {
     margin: 0;
     padding: 0;
@@ -253,7 +263,7 @@ nav {
       nav ul {
         display: flex; }
       nav li {
-        flex: 1;
+        flex: 1 1 20%;
         position: relative; }
         nav li .nav-dropdown {
           display: none;
@@ -263,11 +273,22 @@ nav {
           box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
           min-width: 100%; }
           nav li .nav-dropdown li {
-            min-width: 142px;
             border: 1px solid white; }
             nav li .nav-dropdown li a {
               padding: 15px;
               line-height: 20px; }
+        nav li i {
+          border: solid white;
+          border-width: 0 3px 3px 0;
+          display: inline-block;
+          padding: 3px;
+          margin: 2px;
+          color: white; }
+          nav li i.down {
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg); }
+        nav li:nth-child(2) {
+          flex: 0 0 25%; }
       nav a {
         line-height: 40px;
         border-right: 1px solid white;
@@ -276,7 +297,17 @@ nav {
           border-right: none; } }
   @media (min-width: 78.125em) {
     nav {
-      background-color: transparent; } }
+      background-color: transparent; }
+      nav li i {
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 3px;
+        margin: 2px;
+        color: white; }
+        nav li i.down {
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg); } }
 
 .form form {
   max-width: 500px;

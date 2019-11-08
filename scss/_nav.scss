@@ -23,6 +23,20 @@ nav {
         visibility: visible;
         transform: translate(0);
         transition: visibility 0s, transform 0.3s ease-out;
+
+
+        i{
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px; 
+            margin: 2px;
+            color:white;
+            &.down {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+        }
     }
 
     ul {
@@ -58,7 +72,7 @@ nav {
         }
 
         li{ 
-            flex: 1;
+            flex: 1 1 20%;
             position: relative;
             .nav-dropdown{
                 display: none;    
@@ -68,13 +82,29 @@ nav {
                 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
                 min-width: 100%;
                 li{
-                   min-width: 142px;
                     border: 1px solid white;
                     a{
                         padding: 15px;
                         line-height: 20px;
                     }
                 }
+
+            }
+            i{
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px; 
+                margin: 2px;
+                color:white;
+                &.down {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+            
+            &:nth-child(2){
+                flex:0 0 25%;
             }
         }
     
@@ -90,6 +120,20 @@ nav {
 
     @include mq($desktopMedium){
         background-color:transparent;
+        li{
+            i{
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                display: inline-block;
+                padding: 3px; 
+                margin: 2px;
+                color:white;
+                &.down {
+                    transform: rotate(45deg);
+                    -webkit-transform: rotate(45deg);
+                }
+            }
+        }
     }
 }
 

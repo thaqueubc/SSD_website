@@ -3,7 +3,7 @@
 // Responsive Menu - Dropdown
 const body = document.body;
 const btnMenu = document.getElementById('hamburger');
-const main = document.getElementById('main');
+const main = document.getElementById('main-navigation');
 
 // Below code for preventing nav from animating on 
 // browser re-size modified from code found at
@@ -31,7 +31,7 @@ function openMenu(){
 
 // Create a media query list using
 // matchMedia
-const mql = window.matchMedia('(min-width: 560px)');
+const mql = window.matchMedia('(min-width: 670px)');
 
 // Add a Media Query Listener to the 
 // above media query list
@@ -58,7 +58,7 @@ function removeTransition(e){
 // transition has finished
 body.addEventListener('transitionend', function(){
 	if(!body.classList.contains('show')){
-		body.classList.remove('animating')
+		body.classList.remove('animating');
 	}
 });
 

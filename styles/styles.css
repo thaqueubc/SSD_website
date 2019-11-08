@@ -218,9 +218,10 @@ nav {
   top: 60px;
   left: 0;
   width: 80%;
-  transform: translateX(-100%);
-  transition: visibility 0s 0.3s, transform 0.3s ease-out; }
-  .show nav {
+  transform: translateX(-100%); }
+  nav.activated {
+    transition: visibility 0s 0.3s, transform 0.3s ease-out; }
+  .show nav.activated {
     visibility: visible;
     transform: translate(0);
     transition: visibility 0s, transform 0.3s ease-out; }
@@ -248,7 +249,7 @@ nav {
       height: 40px;
       border-top: none;
       transform: none;
-      background-color: none; }
+      background-color: transparent; }
       nav ul {
         display: flex; }
       nav li {
@@ -259,7 +260,8 @@ nav {
           position: absolute;
           z-index: 1;
           background-color: rgba(5, 37, 144, 0.801);
-          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15); }
+          box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+          min-width: 100%; }
           nav li .nav-dropdown li {
             min-width: 142px;
             border: 1px solid white; }

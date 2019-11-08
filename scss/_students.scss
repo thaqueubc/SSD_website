@@ -1,6 +1,7 @@
 .student-wrapper {
   .student-heading {
     text-align: center;
+    margin-bottom: 0;
   }
   footer {
     margin-top: 100px;
@@ -13,6 +14,9 @@
     @media(min-width:600px) {
       justify-content: space-around;
     }
+    @media(min-width:850px) {
+      width: 80%;
+    }
     tr {
       max-width: 300px;
       display: flex;
@@ -22,6 +26,9 @@
       justify-content: center;
       padding: 10px 0;
       margin-top: 10px;
+      @media(min-width:600px) {
+        margin-top: 30px;
+      }
 
       &:hover {
         color: black;

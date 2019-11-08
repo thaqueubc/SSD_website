@@ -327,71 +327,82 @@ main {
 
 .outline {
   display: flex;
-  box-shadow: inset -5px -5px 10px 10px whitesmoke; }
-  .outline aside {
-    flex: 1 1 18%;
-    padding-left: 20px; }
-    .outline aside li {
+  box-shadow: inset -5px -5px 10px 10px whitesmoke;
+  flex-direction: column; }
+  .outline aside ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5px; }
+    .outline aside ul li {
+      border: 1px solid white;
+      padding: 10px 15px;
+      margin: 5px 0;
+      text-align: center;
+      border-radius: 5px;
+      background: rgba(8, 63, 243, 0.801);
       list-style: none; }
-      .outline aside li a {
-        text-decoration: none;
-        outline: none; }
-    .outline aside ul {
-      display: flex;
-      flex-direction: column;
-      padding: 5px; }
-      .outline aside ul li {
-        border: 1px solid white;
-        padding: 10px 15px;
-        margin: 5px 0;
-        text-align: center;
-        border-radius: 5px;
-        background: rgba(8, 63, 243, 0.801); }
-        .outline aside ul li a {
-          color: white;
-          font-weight: bold; }
+      .outline aside ul li a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none; }
   .outline section {
-    flex: 1 1 78%;
-    padding: 30px;
-    margin: 10px;
-    margin-right: 25px; }
-    .outline section div {
-      padding: 10px; }
-      .outline section div .heading {
-        margin-top: 0;
-        font-size: 2em;
-        text-shadow: 10px 10px 10px #363636; }
-      .outline section div h2 {
-        font-size: 1.3em; }
-  @media (max-width: 750px) {
+    margin: 5px;
+    padding: 10px; }
+    .outline section div h1 {
+      margin: 10px auto; }
+    .outline section div table {
+      margin: 2px; }
+  @media (min-width: 600px) {
+    .outline aside ul {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+      padding: 0; }
+      .outline aside ul li a {
+        text-decoration: none; } }
+  @media (min-width: 800px) {
     .outline {
-      flex-direction: column; }
+      flex-direction: row; }
       .outline aside {
-        flex: 1;
-        padding: 10px;
-        margin: 5px; }
+        flex: 1 1 20%;
+        padding-left: 20px; }
+        .outline aside li {
+          list-style: none; }
+          .outline aside li a {
+            text-decoration: none;
+            outline: none; }
         .outline aside ul {
-          flex-direction: row;
-          justify-content: space-evenly;
-          margin: 0 auto;
-          padding: 0; }
+          display: flex;
+          flex-direction: column;
+          padding: 5px; }
       .outline section {
-        flex: 1;
-        margin: 5px;
-        padding: 10px; }
-        .outline section div h1 {
-          margin: 10px auto; }
-        .outline section div table {
-          margin: 2px; } }
-  @media (max-width: 750px) and (max-width: 400px) {
-    .outline aside ul li a {
-      font-size: 0.8em; } }
+        flex: 1 1 75%;
+        padding: 30px;
+        margin: 10px;
+        margin-right: 25px; }
+        .outline section div {
+          padding: 10px; }
+          .outline section div .heading {
+            margin-top: 0;
+            font-size: 2em;
+            text-shadow: 10px 10px 10px #363636; }
+          .outline section div h2 {
+            font-size: 1.3em; } }
 
 .schedule-page .schedule-heading {
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-size: 1.7em;
   text-align: center; }
+  @media (min-width: 550px) {
+    .schedule-page .schedule-heading {
+      font-size: 2em; } }
 
 .student-wrapper .student-heading {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 0; }
 .student-wrapper footer {
   margin-top: 100px; }
 .student-wrapper .student-table {
@@ -402,6 +413,9 @@ main {
   @media (min-width: 600px) {
     .student-wrapper .student-table {
       justify-content: space-around; } }
+  @media (min-width: 850px) {
+    .student-wrapper .student-table {
+      width: 80%; } }
   .student-wrapper .student-table tr {
     max-width: 300px;
     display: flex;
@@ -411,6 +425,9 @@ main {
     justify-content: center;
     padding: 10px 0;
     margin-top: 10px; }
+    @media (min-width: 600px) {
+      .student-wrapper .student-table tr {
+        margin-top: 30px; } }
     .student-wrapper .student-table tr:hover {
       color: black; }
   .student-wrapper .student-table td {
@@ -443,9 +460,22 @@ main {
           color: #2867B2; }
 
 .calendar {
-  padding: 50px 0;
+  padding: 40px 0;
   width: 80%;
   margin: 0 auto; }
+  .calendar .fc-left h2 {
+    font-size: 1.2em; }
+    @media (min-width: 400px) {
+      .calendar .fc-left h2 {
+        font-size: 1.5em; } }
+    @media (min-width: 800px) {
+      .calendar .fc-left h2 {
+        font-size: 1.7em; } }
+  .calendar .fc-event {
+    font-size: 1em; }
+    @media (min-width: 850px) {
+      .calendar .fc-event {
+        font-size: 1.2em; } }
   .calendar .fc-list-item-time {
     display: none; }
   .calendar .fc-day-grid-event .fc-content {

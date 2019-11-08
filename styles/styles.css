@@ -434,16 +434,26 @@ footer {
     line-height: 1; }
 
 .StaffInfo {
-  padding: 20px;
-  margin: 0 auto; }
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-flow: column wrap;
+  align-content: center;
+  align-content: center; }
+
+div {
+  width: auto; }
 
 img {
   width: 20%;
   height: 20%; }
 
-.Info {
-  display: flex;
-  align-items: center;
-  margin: 10px; }
+.left {
+  flex: 1;
+  width: 49%; }
+
+.right {
+  flex: 2;
+  width: 49%; }
 
 /*# sourceMappingURL=styles.css.map */

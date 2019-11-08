@@ -3,9 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    flex-flow: column wrap;
+    
    align-content: center;
-   align-content: center;
+   
 
 
     
@@ -20,11 +20,11 @@ img{
 }
 
 .left {
-    flex: 1;
-    width:49%;
+    flex: 1 1 49%;
+    
 }
 
 .right {
-    flex: 2;
-    width:49%;
+    flex: 1 1 49%;
+    
 }

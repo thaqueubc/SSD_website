@@ -13,9 +13,13 @@ nav {
     left: 0;
     width: 80%;
     transform: translateX(-100%);
-    transition: visibility 0s 0.3s, transform 0.3s ease-out;
+    
 
-    .show & {
+    &.activated {
+        transition: visibility 0s 0.3s, transform 0.3s ease-out;
+    }
+
+    .show &.activated {
         visibility: visible;
         transform: translate(0);
         transition: visibility 0s, transform 0.3s ease-out;
@@ -49,7 +53,7 @@ nav {
         height: $height;
         border-top: none;
         transform: none;
-        background-color: none;   
+        background-color: transparent;   
         ul {
             display: flex;
         }
@@ -64,6 +68,7 @@ nav {
                 z-index: 1;
                 background-color: $navbar-color-dark;
                 box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+                min-width: 100%;
                 li{
                    min-width: 142px;
                     border: 1px solid white;

@@ -279,7 +279,6 @@ nav {
 main {
   min-height: 100vh; }
   main form {
-    min-width: 820px;
     position: absolute;
     top: 50%;
     left: 50%;

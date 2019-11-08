@@ -422,7 +422,8 @@ footer {
     line-height: 1; }
 
 .StaffInfo {
-  padding: 20px; }
+  padding: 20px;
+  margin: 0 auto; }
 
 img {
   width: 20%;

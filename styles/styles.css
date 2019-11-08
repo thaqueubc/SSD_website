@@ -418,4 +418,16 @@ footer {
     padding: 0;
     line-height: 1; }
 
+.StaffInfo {
+  padding: 20px; }
+
+img {
+  width: 20%;
+  height: 20%; }
+
+.Info {
+  display: flex;
+  align-items: center;
+  margin: 10px; }
+
 /*# sourceMappingURL=styles.css.map */

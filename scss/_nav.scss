@@ -40,7 +40,6 @@ nav {
             outline: none;
             background-color: rgba(white, 0.3);
         }
-
     }
 
     @include mq($phoneLandscape) {
@@ -53,7 +52,6 @@ nav {
         ul {
             display: flex;
         }
-
 
         li{ 
             flex: 1;
@@ -83,12 +81,10 @@ nav {
                 border-right: none;
             }
         }
-        
     }
 
     @include mq($desktopMedium){
         background-color:transparent;
     }
-
 }
 

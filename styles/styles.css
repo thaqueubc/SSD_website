@@ -404,12 +404,90 @@ nav {
             font-size: 1.3em; } }
 
 .schedule-page .schedule-heading {
+  padding-top: 20px;
+  margin-bottom: 0;
+  font-size: 1.7em;
   text-align: center; }
+  @media (min-width: 550px) {
+    .schedule-page .schedule-heading {
+      font-size: 2em; } }
+
+.student-wrapper .student-heading {
+  text-align: center;
+  margin-bottom: 0; }
+.student-wrapper footer {
+  margin-top: 100px; }
+.student-wrapper .student-table {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  @media (min-width: 600px) {
+    .student-wrapper .student-table {
+      justify-content: space-around; } }
+  @media (min-width: 850px) {
+    .student-wrapper .student-table {
+      width: 80%; } }
+  .student-wrapper .student-table tr {
+    max-width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    color: #333333;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.479);
+    justify-content: center;
+    padding: 10px 0;
+    margin-top: 10px; }
+    @media (min-width: 600px) {
+      .student-wrapper .student-table tr {
+        margin-top: 30px; } }
+    .student-wrapper .student-table tr:hover {
+      color: black; }
+  .student-wrapper .student-table td {
+    font-size: 1.1em;
+    width: 100%; }
+    .student-wrapper .student-table td:nth-of-type(1) {
+      font-weight: 700; }
+    @media (min-width: 600px) {
+      .student-wrapper .student-table td {
+        font-size: 1.2em;
+        max-width: 250px; } }
+  .student-wrapper .student-table .sm-td {
+    display: flex;
+    justify-content: center; }
+    .student-wrapper .student-table .sm-td i {
+      font-size: 1.7em;
+      padding: 20px 20px 0px;
+      transition: all 0.2s ease; }
+      .student-wrapper .student-table .sm-td i:hover, .student-wrapper .student-table .sm-td i:active, .student-wrapper .student-table .sm-td i:focus {
+        transform: translateY(-5%); }
+      .student-table tr:hover i.fa-github {
+        color: #333; }
+      .student-wrapper .student-table .sm-td i.fa-github {
+        color: grey; }
+        .student-wrapper .student-table .sm-td i.fa-github:hover, .student-wrapper .student-table .sm-td i.fa-github:active, .student-wrapper .student-table .sm-td i.fa-github:focus {
+          color: #333; }
+      .student-wrapper .student-table .sm-td i.fa-linkedin-in {
+        color: grey; }
+        .student-wrapper .student-table .sm-td i.fa-linkedin-in:hover, .student-wrapper .student-table .sm-td i.fa-linkedin-in:active, .student-wrapper .student-table .sm-td i.fa-linkedin-in:focus {
+          color: #2867B2; }
 
 .calendar {
-  padding: 50px 0;
+  padding: 40px 0;
   width: 80%;
   margin: 0 auto; }
+  .calendar .fc-left h2 {
+    font-size: 1.2em; }
+    @media (min-width: 400px) {
+      .calendar .fc-left h2 {
+        font-size: 1.5em; } }
+    @media (min-width: 800px) {
+      .calendar .fc-left h2 {
+        font-size: 1.7em; } }
+  .calendar .fc-event {
+    font-size: 1em; }
+    @media (min-width: 850px) {
+      .calendar .fc-event {
+        font-size: 1.2em; } }
   .calendar .fc-list-item-time {
     display: none; }
   .calendar .fc-day-grid-event .fc-content {
@@ -437,7 +515,13 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  align-content: center; }
+  justify-content: space-between;
+  margin: 0 auto;
+  padding-left: 40px; }
+
+h1 {
+  margin: 0 auto;
+  align-items: center; }
 
 div {
   width: auto; }

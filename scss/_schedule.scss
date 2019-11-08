@@ -1,5 +1,13 @@
 .schedule-page {
   .schedule-heading {
+    padding-top: 20px;
+    margin-bottom: 0;
+    font-size: 1.7em;
     text-align: center;
+    @media(min-width:550px) {
+      font-size: 2em;
+    }
   }
+
+  
 }

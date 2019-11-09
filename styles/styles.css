@@ -188,7 +188,7 @@ header {
 .hero-image {
   z-index: 900;
   height: calc(100vh - 60px);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpg");
   filter: blur(8px);
   transform: scale(1.1);
   background-position: center;
@@ -451,13 +451,15 @@ nav {
     .outline section div table {
       margin: 2px; }
   @media (min-width: 600px) {
-    .outline aside ul {
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin: 0;
-      padding: 0; }
-      .outline aside ul li a {
-        text-decoration: none; } }
+    .outline aside {
+      padding-top: 40px; }
+      .outline aside ul {
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin: 0;
+        padding: 0; }
+        .outline aside ul li a {
+          text-decoration: none; } }
   @media (min-width: 800px) {
     .outline {
       flex-direction: row; }

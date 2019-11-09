@@ -54,6 +54,8 @@ var calendarDesktop = new FullCalendar.Calendar(calendarDesktopEl, {
 plugins: [ 'dayGrid', 'list' ],
 defaultView: 'dayGridMonth',
 weekends: false,
+showNonCurrentDates: false,
+fixedWeekCount: false,
 
 header: {
     left: 'title',

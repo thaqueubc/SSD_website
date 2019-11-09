@@ -101,7 +101,7 @@ header {
     display: inline-block;
     padding: 8px;
     position: absolute;
-    bottom: 5%;
+    bottom: 4%;
     left: 50%;
     transform: translateX(-50%);
     transform: rotate(45deg); }
@@ -185,7 +185,7 @@ header {
 
 .hero-image {
   z-index: 900;
-  height: 100vh;
+  height: calc(100vh - 60px);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpeg");
   filter: blur(8px);
   transform: scale(1.1);
@@ -630,6 +630,8 @@ footer {
     list-style: none;
     padding-left: 0;
     margin: 0; }
+  footer a i {
+    color: white; }
   footer i:hover {
     transition: all .2s ease;
     transform: translateY(-10%); }

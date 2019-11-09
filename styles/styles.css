@@ -186,7 +186,7 @@ header {
 .hero-image {
   z-index: 900;
   height: calc(100vh - 60px);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/images/students-working-together.jpg");
   filter: blur(8px);
   transform: scale(1.1);
   background-position: center;

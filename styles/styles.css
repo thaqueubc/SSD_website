@@ -661,6 +661,7 @@ footer {
   padding: 5px;
   text-align: center; }
 .staff-container img {
+  max-width: 170px;
   width: 30%;
   height: 30%;
   object-fit: cover; }

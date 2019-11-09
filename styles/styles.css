@@ -539,11 +539,57 @@ footer {
   border-top: 1px dotted #7c7979b0;
   background-color: #272727;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 10px; }
   footer .col1, footer .col2, footer .col3 {
-    flex: 1;
+    width: 100%;
     margin: 0;
     color: white; }
+  @media (min-width: 380px) {
+    footer .col1 {
+      max-width: 285px; } }
+  @media (min-width: 755px) {
+    footer .col1 {
+      width: 30%; } }
+  @media (min-width: 380px) {
+    footer .col2 {
+      max-width: 110px; } }
+  @media (min-width: 755px) {
+    footer .col2 {
+      width: 30%; } }
+  footer .col3 {
+    margin: 0 auto;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+    max-width: 300px; }
+    @media (min-width: 755px) {
+      footer .col3 {
+        width: 30%;
+        justify-content: space-around;
+        margin: 0;
+        font-size: 2em;
+        align-items: center; } }
+  footer h2 {
+    font-size: 1.2em;
+    margin-bottom: 0; }
+  footer p {
+    margin: 0px; }
+  footer ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+  footer i:hover {
+    transition: all .2s ease;
+    transform: translateY(-10%); }
+    footer i:hover.fa-twitter {
+      color: #38A1F3; }
+    footer i:hover.fa-facebook-f {
+      color: #3b5998; }
+    footer i:hover.fa-google {
+      color: #FFA500; }
 
 .staff-container .StaffInfo {
   display: flex;
@@ -552,13 +598,13 @@ footer {
     flex: 1; }
   .staff-container .StaffInfo .right {
     flex: 1; }
+  .staff-container .StaffInfo div {
+    padding: 20px; }
 .staff-container .staff {
   font-size: 2em;
   text-shadow: 10px 10px 10px #363636;
   padding: 5px;
   text-align: center; }
-.staff-container div {
-  padding: 20px; }
 .staff-container img {
   width: 30%;
   height: 30%;

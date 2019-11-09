@@ -4,7 +4,8 @@
    form{
        max-width: 500px;
        margin: 0 auto;
-        margin-top: 20px;;
+        margin-top: 20px;
+        padding-bottom: 30px;
         h2{
             @include subheading;
             margin: 5px auto;

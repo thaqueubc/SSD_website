@@ -41,6 +41,28 @@ body {
   margin-left: auto;
   margin-right: auto; }
 
+.overview-wrapper main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto; }
+  @media (min-width: 680px) {
+    .overview-wrapper main {
+      padding: 40px 20px; } }
+  @media (min-width: 680px) {
+    .overview-wrapper main {
+      padding: 70px 20px; } }
+  .overview-wrapper main h1 {
+    margin: 0; }
+    @media (min-width: 450px) {
+      .overview-wrapper main h1 {
+        font-size: 1.5em; } }
+    @media (min-width: 680px) {
+      .overview-wrapper main h1 {
+        font-size: 2em; } }
+  @media (min-width: 680px) {
+    .overview-wrapper main p {
+      font-size: 1.1em; } }
+
 header {
   z-index: 9000;
   background-color: rgba(5, 37, 144, 0.801);
@@ -94,20 +116,46 @@ header {
   transform: translate(-50%, -50%);
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: "a b c" "d e f" "g h i"; }
   .banner-content .banner-box {
-    height: 200px;
-    width: 200px;
+    height: 90px;
+    width: 90px;
     box-shadow: inset 0 0 40px #00000079; }
+    @media (min-width: 450px) {
+      .banner-content .banner-box {
+        height: 140px;
+        width: 140px; } }
+    @media (min-width: 680px) {
+      .banner-content .banner-box {
+        height: 200px;
+        width: 200px; } }
   .banner-content .banner-box-title {
-    text-align: center; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0; }
+    @media (min-width: 450px) {
+      .banner-content .banner-box-title {
+        font-size: 3em; } }
+    @media (min-width: 680px) {
+      .banner-content .banner-box-title {
+        font-size: 4em; } }
   .banner-content .banner-box-text {
     display: flex;
     justify-content: center;
     align-items: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: .5em; }
+    @media (min-width: 450px) {
+      .banner-content .banner-box-text {
+        font-size: .7em; } }
+    @media (min-width: 680px) {
+      .banner-content .banner-box-text {
+        font-size: 1.1em; } }
   .banner-content .banner-box-text:nth-of-type(1) {
     background-color: blue; }
   .banner-content .banner-box-text:nth-of-type(2) {
@@ -312,7 +360,8 @@ nav {
 .form form {
   max-width: 500px;
   margin: 0 auto;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding-bottom: 30px; }
   .form form h2 {
     font-size: 2em;
     text-shadow: 10px 10px 10px #363636;

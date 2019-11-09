@@ -3,22 +3,41 @@
   @include absolute-center;
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 200px);
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
   grid-template-areas: 
     "a b c"
     "d e f"
     "g h i";
 
   .banner-box {
-    height: 200px;
-    width: 200px;
-    box-shadow: inset 0 0 40px #00000079;
+    height: 90px;
+    width: 90px;
+      @media (min-width:450px) {
+        height: 140px;
+        width: 140px;
+      }
+      @media (min-width: 680px) {
+        height: 200px;
+        width: 200px;
+      }
 
+    box-shadow: inset 0 0 40px #00000079;
   }
 
   .banner-box-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    margin: 0;
+
+    @media (min-width:450px) {
+      font-size: 3em;
+    }
+    @media (min-width:680px) {
+      font-size: 4em;
+    }
   }
 
   .banner-box-text {
@@ -26,6 +45,14 @@
     justify-content: center;
     align-items: center;
     text-transform: uppercase;
+    font-weight: 400;
+    font-size: .5em;
+    @media (min-width:450px) {
+      font-size: .7em;
+    }
+    @media (min-width:680px) {
+      font-size: 1.1em;
+    }
   }
   .banner-box-text:nth-of-type(1) {
     background-color: blue;

@@ -3,3 +3,8 @@ https://github.com/thaqueubc/SSD_website.git
 Tara Nakajima A01182211
 Priyanka kammari A01193766
 Tasnuva Haque A01174842
+
+Some notes:
+The schedule and students pages uses JavaScript plugins, that make HttpRequests, to extract data
+from the excel sheets and display it on the page.
+Must be opened with local server in order to load properly.

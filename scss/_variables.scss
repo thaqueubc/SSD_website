@@ -13,6 +13,7 @@ $navbar-color-light: lighten($navbar-color, 20);
 // Fonts
 $body-font: 'Archivo', sans-serif;
 $heading-font: 'Archivo', sans-serif;
+$header-font: 'Wallpoet', cursive;
 // Typographic Defualts
 $line-height: 1.4;
 
@@ -21,7 +22,7 @@ $padding: 30px;
 // Grid Values
 $gutter: 2;
 // Header variables
-$header-height: 60px;
+$header-height: 80px;
 
 // Function to determine column width
 // takes two numerical parameters:

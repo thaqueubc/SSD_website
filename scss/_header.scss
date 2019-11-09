@@ -7,14 +7,17 @@ header {
     align-items: center;
     height: $header-height;
 
-    h1 {
+    .bcit {
+        font-family: $header-font;
+        text-shadow: 3px 3px 3px black;
         z-index: 9000;
         flex: 1;
         @include flatten;
         color: $text-color-light;
         font-size: 1.5em;
+        //font-weight: bold;
         @include mq($phoneLandscape){
-            font-size: 1.5em;
+            font-size: 3em;
         }
     }
 

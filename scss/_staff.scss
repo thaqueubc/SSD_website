@@ -1,13 +1,19 @@
+.staff-container{
+
 .StaffInfo{
 
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    .left {
+        flex: 1;
+        
+    }
     
-    text-align: center;
-    padding:10px;
-    
+    .right {
+        flex: 1;
+        
+    }
+
    
 }
 
@@ -28,16 +34,36 @@ img{
     
 }
 
-.left {
-    flex: 1 1 49%;
-    
-}
 
-.right {
-    flex: 1 1 49%;
-    
-}
 
 .Info{
     text-align: center;
+}
+
+@media (min-width: 600px)
+{
+    .StaffInfo{
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    
+         text-align: center;
+         padding:10px;
+        
+        .right {
+            flex: 1 1 49%;
+            
+        }
+        
+        .left {
+            flex: 1 1 49%;
+            
+        }
+    }
+
+    
+}
 }

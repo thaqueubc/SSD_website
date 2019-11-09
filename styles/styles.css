@@ -535,15 +535,15 @@ nav {
       display: none; } }
 
 footer {
-  text-align: center;
   padding: 30px;
   border-top: 1px dotted #7c7979b0;
-  background-color: #272727; }
-  footer p {
-    color: white;
+  background-color: #272727;
+  display: flex;
+  padding-top: 10px; }
+  footer .col1, footer .col2, footer .col3 {
+    flex: 1;
     margin: 0;
-    padding: 0;
-    line-height: 1; }
+    color: white; }
 
 .staff-container .StaffInfo {
   display: flex;
